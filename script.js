@@ -10,8 +10,8 @@ const student_card = (student_input) =>{
         date_of_birth: null,
         teacher: "Mr Paul"
     };
-    defaults_inputs = Object.assign(defaults_inputs, student_input)
-    console.log(defaults_inputs)
+    defaults_inputs = Object.assign(defaults_inputs, student_input);
+    console.log(defaults_inputs);
 };
 student_card({name:"Malonga Pierre", date_of_birth:"29/12/97"});
 
@@ -27,5 +27,12 @@ Object.defineProperty(master_card, "code", {
     writable: false,
     configurable: false
 });
-master_card.code = "453"
-console.log(master_card.code)
+master_card.code = "453";
+console.log(master_card.code);
+
+// Protect Object property
+const config = {
+  apiKey: "kdgsyd12jd5jdls7dh"
+}
+Object.freeze(config);
+console.log(config.apiKey);
